@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Web-Telegram</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+        }
+        
+        header {
+            
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        header h1 {
+            margin: 0;
+            color: black;
+        }
+        
+        .bot-link {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            color: #fff;
+            text-decoration: none;
+            background-color: #0088cc;
+            border-radius: 3px;
+            padding: 10px;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .card {
+            background-color: #fff;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 45%;
+        }
+        
+        .card h2 {
+            margin-top: 0;
+        }
+        
+        .btn-private, .btn-global {
+            background-color: #0088cc;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        
+        .btn-private:hover, .btn-global:hover {
+            background-color: #006699;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Chat Web-Telegram</h1>
+        <a href="#" target="_blank" class="bot-link">Bot Telegram</a>
+    </header>
+    <main>
+        <div class="container">
+            <div class="card">
+                <h2>Room Private</h2>
+                <p>Chat dengan pengguna telegram tanpa dilihat oleh pengguna web lainnya</p>
+                <button class="btn-private">Gabung</button>
+            </div>
+            <div class="card">
+                <h2>Room Global</h2>
+                <p>Chat kamu dapat dilihat oleh pengguna web lain dan kamu bisa melihat chat pengguna web lain</p>
+                <button class="btn-global">Gabung</button>
+            </div>
+        </div>
+    </main>
+    <script>
+        // Fungsi untuk mengarahkan ke room private
+        document.querySelector('.btn-private').addEventListener('click', () => {
+            window.location.href = 'private.html';
+        });
+        
+        // Fungsi untuk mengarahkan ke room global
+        document.querySelector('.btn-global').addEventListener('click', () => {
+            window.location.href = 'global-chat.html';
+        });
+    </script>
+</body>
+</html>
